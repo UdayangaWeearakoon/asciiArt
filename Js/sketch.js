@@ -1,4 +1,4 @@
-const density = 'N@#W$9876543210?!abc;:+=-,._              ';
+const density = 'N@#W$9876543210?!abc;:+=-,._  ';
 
 let video;
 let asciiDiv;
@@ -10,7 +10,7 @@ function setup() {
   video.hide();
   // Select the correct div element by its class
   asciiDiv = select('#live-preview');
-  frameRate(10);
+  frameRate(100);
 }
 
 function draw() {
@@ -26,7 +26,7 @@ function draw() {
       const avg = (r + g + b) / 3;
 
       const len = density.length;
-      const charIndex = floor(map(avg, 0, 255, 0, len-1));
+      const charIndex = floor(map(avg, 0, 255, len-1, 0));
 
       const c = density.charAt(charIndex);
       if (c == ' ') asciiImage += '&nbsp;';

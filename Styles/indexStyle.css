@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f0f0f0;
-    background-image: url(/Images/background.png);
+    background-image: url('../Images/background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #000;
